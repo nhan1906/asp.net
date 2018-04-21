@@ -1,0 +1,302 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutChung.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+@section  RenderSliderImageForFrontPage{
+    @*Slider hình ảnh*@
+    <!-- Main Slider ============================================= -->
+    <div class="main-slider">
+        <div class="layer-slider">
+            <ul class="slides">
+            @Html.Partial("~/Views/Home/SliderImagePartial.cshtml")
+            </ul><!-- end .slides -->
+        </div> <!-- end .layer-slider -->
+    </div> <!-- end .main-slider -->
+}
+
+<div id="content" class="site-content">
+    <main id="main" class="site-main">
+
+        <!-- About Box ============================================= -->
+        <div class="about-box">
+            <div class="wrap">
+                <div class="inner-wrap">
+                    <h2 class="box-title">For Unique People Only</h2>
+                    <p class="box-sub-title">Sed mattis ut ligula quis ultricies. Integer vel condimentum enim. Praesent sed aliquet dolor.</p>
+                    <div class="two-column-full-width freesia-animation fadeInLeft" data-wow-delay="0.7s">
+                        <div class="about-img">
+                            <a title="Promotions and Product Launches" href="https://demo.themefreesia.com/excellent/promotions-product-launches/"><img width="768" height="480" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/about-image-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/about-image-1.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/about-image-1-300x188.jpg 300w" sizes="(max-width: 768px) 100vw, 768px" /></a>
+                        </div>
+                    </div><!-- end .two-column-full-width -->
+                    <div class="two-column-full-width freesia-animation fadeInRight" data-wow-delay="0.7s">
+                        <div class="about-content">
+                            <div class="about-text">
+                                <h2 class="about-title">
+                                    <a title="Promotions and Product Launches" href="https://demo.themefreesia.com/excellent/promotions-product-launches/">Promotions and Product Launches</a>
+                                </h2>
+                                <p>Suspendisse sagittis laoreet porta. Proin quis iaculis risus. Sed vulputate libero in ex lacinia bibendum. Nam at placerat massa. Aenean a nisl eleifend, pellentesque mi vitae, posuere dolor. Sed porttitor blandit ante. <a href="https://demo.themefreesia.com/excellent/promotions-product-launches/#more-66" class="more-link"><span aria-label="Continue reading Promotions and Product Launches">(more&hellip;)</span></a></p>
+                            </div><!-- end .about-text -->
+                        </div><!-- end .about-content -->
+                    </div><!-- end .two-column-full-width -->
+                </div><!-- end .inner-wrap -->
+            </div><!-- end .wrap -->
+        </div><!-- end .about-box -->
+        <!-- Our Feature Box ============================================= -->			<div class="our-feature-box">
+            <div class="wrap">
+                <div class="inner-wrap">
+                    <div class="column clearfix">
+                        <div class="three-column freesia-animation fadeInLeft" data-wow-delay="0.5s">
+                            <div class="feature-content">
+                                <article id="post-68" class="post-68 page type-page status-publish hentry">
+                                    <h3 class="feature-title"><a href="https://demo.themefreesia.com/excellent/front-page-features/wide-activities/" title="Wide Activities" rel="bookmark">Wide Activities</a></h3>
+                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                </article>
+                                <a title="Wide Activities" href="https://demo.themefreesia.com/excellent/front-page-features/wide-activities/" class="more-link">Continue Reading</a>
+                            </div> <!-- end .feature-content -->
+                        </div><!-- end .three-column -->
+                        <div class="three-column freesia-animation fadeInLeft" data-wow-delay="0.6s">
+                            <div class="feature-content">
+                                <article id="post-71" class="post-71 page type-page status-publish hentry">
+                                    <h3 class="feature-title"><a href="https://demo.themefreesia.com/excellent/front-page-features/good-performance/" title="Good Performance" rel="bookmark">Good Performance</a></h3>
+                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                </article>
+                                <a title="Good Performance" href="https://demo.themefreesia.com/excellent/front-page-features/good-performance/" class="more-link">Continue Reading</a>
+                            </div> <!-- end .feature-content -->
+                        </div><!-- end .three-column -->
+                        <div class="three-column freesia-animation fadeInLeft" data-wow-delay="0.7s">
+                            <div class="feature-content">
+                                <article id="post-73" class="post-73 page type-page status-publish hentry">
+                                    <h3 class="feature-title"><a href="https://demo.themefreesia.com/excellent/front-page-features/creative-design/" title="Creative Design" rel="bookmark">Creative Design</a></h3>
+                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                </article>
+                                <a title="Creative Design" href="https://demo.themefreesia.com/excellent/front-page-features/creative-design/" class="more-link">Continue Reading</a>
+                            </div> <!-- end .feature-content -->
+                        </div><!-- end .three-column -->
+                    </div><!-- .end column-->
+                </div><!-- end .inner-wrap -->
+            </div><!-- end .wrap -->
+        </div><!-- end .our-feature-box -->
+        <!-- Latest Blog ============================================= -->		<div class="latest-blog-box">
+            <div class="wrap">
+                <div class="inner-wrap">
+                    <h2 class="box-title">Latest from blog </h2>
+                    <p class="box-sub-title">Maecenas sit amet suscipit orci, sit amet blandit felis.</p>
+                    <div class="column clearfix">
+                        <div class="three-column freesia-animation fadeInLeft" data-wow-delay="0.8s">
+                            <div class="latest-blog-content">
+                                <article id="post-82" class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-blog">
+                                    <div class="latest-blog-image">
+                                        <figure class="post-featured-image">
+                                            <a title="Use more link to excerpt below text content" href="https://demo.themefreesia.com/excellent/2017/02/23/build-professionals-professionals-2/"><img width="768" height="480" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-1.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-1-300x188.jpg 300w" sizes="(max-width: 768px) 100vw, 768px" /></a>
+                                        </figure><!-- end.post-featured-image -->
+                                    </div><!-- end.post-image-content -->
+                                    <div class="latest-blog-text">
+                                        <div class="post-82 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-blog">
+                                            <header class="entry-header">
+                                                <div class="entry-meta">
+                                                    <span class="cat-links">
+                                                        <a href="https://demo.themefreesia.com/excellent/category/latest-blog/" rel="category tag">Latest blog</a>
+                                                    </span><!-- end .cat-links -->
+                                                </div>
+                                                <h2 class="entry-title">
+                                                    <a title="Use more link to excerpt below text content" href="https://demo.themefreesia.com/excellent/2017/02/23/build-professionals-professionals-2/">Use more link to excerpt below text content</a>
+                                                </h2><!-- end.entry-title -->
+                                                <div class="entry-meta">
+                                                    <span class="author vcard"><span>by</span><a href="https://demo.themefreesia.com/excellent/author/demo_themefreesia/" title="author">themefreesia</a></span>
+                                                    <span class="posted-on">
+                                                        <a title="10:16 am" href="https://demo.themefreesia.com/excellent/2017/02/23/build-professionals-professionals-2/">
+                                                            February 23, 2017
+                                                        </a>
+                                                    </span>
+                                                </div><!-- end .entry-meta -->
+                                            </header><!-- end .entry-header -->
+                                            <div class="entry-content">
+                                                <p>You have to use more link in text editor section to excerpt(to hide other text) these text. Which will <span class="st">displays the <em><strong>excerpt text only</strong>.</em></span></p>
+                                            </div><!-- end .entry-content -->
+                                        </div><!-- end .post -->
+                                    </div><!-- end .latest-blog-text -->
+                                </article><!-- end .post -->
+                            </div><!-- end .latest-blog-content -->
+                        </div><!-- end .three-column -->
+                        <div class="three-column freesia-animation fadeInUp" data-wow-delay="0.8s">
+                            <div class="latest-blog-content">
+                                <article id="post-80" class="post-80 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-blog">
+                                    <div class="latest-blog-image">
+                                        <figure class="post-featured-image">
+                                            <a title="Specifically designed Creative WP theme." href="https://demo.themefreesia.com/excellent/2017/02/23/specifically-designed-creative-wp-theme/"><img width="768" height="480" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-2.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-2-300x188.jpg 300w" sizes="(max-width: 768px) 100vw, 768px" /></a>
+                                        </figure><!-- end.post-featured-image -->
+                                    </div><!-- end.post-image-content -->
+                                    <div class="latest-blog-text">
+                                        <div class="post-80 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-blog">
+                                            <header class="entry-header">
+                                                <div class="entry-meta">
+                                                    <span class="cat-links">
+                                                        <a href="https://demo.themefreesia.com/excellent/category/latest-blog/" rel="category tag">Latest blog</a>
+                                                    </span><!-- end .cat-links -->
+                                                </div>
+                                                <h2 class="entry-title">
+                                                    <a title="Specifically designed Creative WP theme." href="https://demo.themefreesia.com/excellent/2017/02/23/specifically-designed-creative-wp-theme/">Specifically designed Creative WP theme.</a>
+                                                </h2><!-- end.entry-title -->
+                                                <div class="entry-meta">
+                                                    <span class="author vcard"><span>by</span><a href="https://demo.themefreesia.com/excellent/author/demo_themefreesia/" title="author">themefreesia</a></span>
+                                                    <span class="posted-on">
+                                                        <a title="10:15 am" href="https://demo.themefreesia.com/excellent/2017/02/23/specifically-designed-creative-wp-theme/">
+                                                            February 23, 2017
+                                                        </a>
+                                                    </span>
+                                                </div><!-- end .entry-meta -->
+                                            </header><!-- end .entry-header -->
+                                            <div class="entry-content">
+                                                <p>You have to use more link in text editor section to excerpt(to hide other text) these text. Which will <span class="st">displays the <em><strong>excerpt text only</strong>.</em></span></p>
+                                            </div><!-- end .entry-content -->
+                                        </div><!-- end .post -->
+                                    </div><!-- end .latest-blog-text -->
+                                </article><!-- end .post -->
+                            </div><!-- end .latest-blog-content -->
+                        </div><!-- end .three-column -->
+                        <div class="three-column freesia-animation fadeInRight" data-wow-delay="0.8s">
+                            <div class="latest-blog-content">
+                                <article id="post-78" class="post-78 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-blog">
+                                    <div class="latest-blog-image">
+                                        <figure class="post-featured-image">
+                                            <a title="Build by professionals for professionals." href="https://demo.themefreesia.com/excellent/2017/02/23/build-professionals-professionals/"><img width="768" height="480" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-3.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-3.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/post-image-3-300x188.jpg 300w" sizes="(max-width: 768px) 100vw, 768px" /></a>
+                                        </figure><!-- end.post-featured-image -->
+                                    </div><!-- end.post-image-content -->
+                                    <div class="latest-blog-text">
+                                        <div class="post-78 post type-post status-publish format-standard has-post-thumbnail hentry category-latest-blog">
+                                            <header class="entry-header">
+                                                <div class="entry-meta">
+                                                    <span class="cat-links">
+                                                        <a href="https://demo.themefreesia.com/excellent/category/latest-blog/" rel="category tag">Latest blog</a>
+                                                    </span><!-- end .cat-links -->
+                                                </div>
+                                                <h2 class="entry-title">
+                                                    <a title="Build by professionals for professionals." href="https://demo.themefreesia.com/excellent/2017/02/23/build-professionals-professionals/">Build by professionals for professionals.</a>
+                                                </h2><!-- end.entry-title -->
+                                                <div class="entry-meta">
+                                                    <span class="author vcard"><span>by</span><a href="https://demo.themefreesia.com/excellent/author/demo_themefreesia/" title="author">themefreesia</a></span>
+                                                    <span class="posted-on">
+                                                        <a title="10:15 am" href="https://demo.themefreesia.com/excellent/2017/02/23/build-professionals-professionals/">
+                                                            February 23, 2017
+                                                        </a>
+                                                    </span>
+                                                </div><!-- end .entry-meta -->
+                                            </header><!-- end .entry-header -->
+                                            <div class="entry-content">
+                                                <p>You have to use more link in text editor section to excerpt(to hide other text) these text. Which will <span class="st">displays the <em><strong>excerpt text only</strong>.</em></span></p>
+                                            </div><!-- end .entry-content -->
+                                        </div><!-- end .post -->
+                                    </div><!-- end .latest-blog-text -->
+                                </article><!-- end .post -->
+                            </div><!-- end .latest-blog-content -->
+                        </div><!-- end .three-column -->
+                    </div><!-- end .column -->
+                </div><!-- end .inner-wrap -->
+            </div><!-- end .wrap -->
+        </div><!-- end .latest-blog-box -->
+        <!-- Portfolio Box ============================================= -->				<div class="portfolio-box clearfix">
+            <div class="four-column-full-width">
+                <div class="portfolio-title-wrap freesia-animation fadeInRight" data-wow-delay="0.6s">
+                    <h2 class="portfolio-title"><a title="Happy Customers" href="https://demo.themefreesia.com/excellent/portfolio/happy-customers/">Happy Customers</a></h2>
+                </div>
+                <div class="portfolio-img freesia-animation fadeInLeft" data-wow-delay="0.6s">
+                    <a title="Happy Customers" href="https://demo.themefreesia.com/excellent/portfolio/happy-customers/"><img width="1170" height="600" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-1.jpg 1170w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-1-300x154.jpg 300w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-1-768x394.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-1-1024x525.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" /></a>
+                </div>
+            </div><!-- end .four-column-full-width -->
+            <div class="four-column-full-width">
+                <div class="portfolio-title-wrap freesia-animation fadeInRight" data-wow-delay="0.6s">
+                    <h2 class="portfolio-title"><a title="Projects Completed" href="https://demo.themefreesia.com/excellent/portfolio/projects-completed/">Projects Completed</a></h2>
+                </div>
+                <div class="portfolio-img freesia-animation fadeInLeft" data-wow-delay="0.6s">
+                    <a title="Projects Completed" href="https://demo.themefreesia.com/excellent/portfolio/projects-completed/"><img width="1170" height="600" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-2.jpg 1170w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-2-300x154.jpg 300w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-2-768x394.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-2-1024x525.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" /></a>
+                </div>
+            </div><!-- end .four-column-full-width -->
+            <div class="four-column-full-width">
+                <div class="portfolio-title-wrap freesia-animation fadeInRight" data-wow-delay="0.6s">
+                    <h2 class="portfolio-title"><a title="Digital Design" href="https://demo.themefreesia.com/excellent/portfolio/digital-design/">Digital Design</a></h2>
+                </div>
+                <div class="portfolio-img freesia-animation fadeInLeft" data-wow-delay="0.6s">
+                    <a title="Digital Design" href="https://demo.themefreesia.com/excellent/portfolio/digital-design/"><img width="1170" height="600" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-3.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-3.jpg 1170w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-3-300x154.jpg 300w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-3-768x394.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-3-1024x525.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" /></a>
+                </div>
+            </div><!-- end .four-column-full-width -->
+            <div class="four-column-full-width">
+                <div class="portfolio-title-wrap freesia-animation fadeInRight" data-wow-delay="0.6s">
+                    <h2 class="portfolio-title"><a title="New Research" href="https://demo.themefreesia.com/excellent/portfolio/new-research/">New Research</a></h2>
+                </div>
+                <div class="portfolio-img freesia-animation fadeInLeft" data-wow-delay="0.6s">
+                    <a title="New Research" href="https://demo.themefreesia.com/excellent/portfolio/new-research/"><img width="1170" height="600" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-4.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-4.jpg 1170w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-4-300x154.jpg 300w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-4-768x394.jpg 768w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/portfolio-image-4-1024x525.jpg 1024w" sizes="(max-width: 1170px) 100vw, 1170px" /></a>
+                </div>
+            </div><!-- end .four-column-full-width -->
+        </div><!-- end .portfolio-box -->
+        <!-- Testimonial Box============================================= -->			<div class="testimonial-box">
+            <div class="testimonial-bg">
+                <div class="wrap">
+                    <div class="inner-wrap">
+                        <h2 class="box-title">Our Clients Feedback </h2>
+                        <div class="testimonials">
+                            <div class="testimonial-slider">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="testimonial-quote">
+                                            <p>&#8221; Suspendisse sagittis laoreet porta. Proin quis iaculis risus. Sed vulputate libero in ex lacinia bibendum. Nam at placerat massa. Aenean a nisl eleifend, pellentesque mi vitae, posuere dolor. Sed porttitor blandit ante, ut rhoncus sapien tempus non. Quisque quam dolor, iaculis sit amet aliquet non, dignissim ac urna. Mauris porttitor nulla at lectus ultrices tempus.. &#8220;</p>
+                                        </div>
+                                        <div>
+                                            <img width="240" height="240" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-1.jpg 240w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-1-150x150.jpg 150w" sizes="(max-width: 240px) 100vw, 240px" />
+                                        </div>
+                                        <cite>AUGUE ELEIFEND, libero</cite>
+                                    </li>
+                                    <li>
+                                        <div class="testimonial-quote">
+                                            <p>&#8221; Proin quis iaculis risus. Sed vulputate libero in ex lacinia bibendum. Nam at placerat massa. Aenean a nisl eleifend, pellentesque mi vitae, posuere dolor. Sed porttitor blandit ante, ut rhoncus sapien tempus non. Quisque quam dolor, iaculis sit amet aliquet non, dignissim ac urna. Mauris porttitor nulla at lectus ultrices tempus.. &#8221;</p>
+                                        </div>
+                                        <div>
+                                            <img width="240" height="240" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-2.jpg 240w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-2-150x150.jpg 150w" sizes="(max-width: 240px) 100vw, 240px" />
+                                        </div>
+                                        <cite>LINA COOPER, leifend</cite>
+                                    </li>
+                                    <li>
+                                        <div class="testimonial-quote">
+                                            <p>&#8221; Sed vulputate libero in ex lacinia bibendum. Nam at placerat massa. Aenean a nisl eleifend, pellentesque mi vitae, posuere dolor. Sed porttitor blandit ante. Mauris porttitor nulla at lectus ultrices tempus. Maecenas ut nisl fermentum, tempor orci in &#8220;</p>
+                                        </div>
+                                        <div>
+                                            <img width="240" height="240" src="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-3.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-3.jpg 240w, https://demo.themefreesia.com/excellent/wp-content/uploads/sites/17/2017/02/testimonial-img-3-150x150.jpg 150w" sizes="(max-width: 240px) 100vw, 240px" />
+                                        </div>
+                                        <cite>AUGUST ARIANA, pacific</cite>
+                                    </li>
+                                </ul><!-- end .slides -->
+                            </div><!-- end .testimonials -->
+                        </div><!-- end .testimonials -->
+                    </div> <!-- end .inner-wrap -->
+                </div><!-- end .wrap -->
+            </div><!-- end .testimonial_bg -->
+        </div><!-- end .testimonial-box -->
+    </main><!-- end #main -->
+</div><!-- end #content -->
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
