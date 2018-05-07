@@ -10,28 +10,21 @@ namespace WebFinal.Controllers
     public class SanPhamController : Controller
     {
 
-        BanHangModel db = new BanHangModel();
-        // GET: SanPham
-        public ActionResult Index()
-        {
-            return View();  
-        }
+        BanHangEntities db = new BanHangEntities();
+        
 
-        public ViewResult XemChiTiet(int maSP)
+        public ViewResult Index(int maSP=-1)
         {
             SanPham sp = db.SanPhams.SingleOrDefault(n => n.MaSP == maSP);
-            //if (sp == null)
-            //{
-             //   Response.StatusCode = 404;
-              //  return null;
-            //}
+            if (sp == null)
+            {
+                Response.StatusCode = 404;
+                // TODO 
+                return null;
+            }
             return View(sp);
         }
-
-        public PartialViewResult DanhSachLoaiSanPham()
-        {
-            var loaiSanPhams = db.LoaiSanPhams.ToList();
-            return PartialView(loaiSanPhams);
-        }
+        
+        
     }
-}
+} 

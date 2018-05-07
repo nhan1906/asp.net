@@ -1,0 +1,28 @@
+﻿@model List<WebFinal.Models.SanPham>
+@{
+    foreach(var item in Model)
+    {
+        <!-- single-product start -->
+        <div style="height:270px" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="single-product">
+                <div class="product-img">
+                    <a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.MaSP })">
+                        <img class="primary-img" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="Sterling Silver Ring" >
+                    </a>
+                    <div class="product-action">
+                        <div class="pro-button-top">
+                            @*Xem chi tiet khi nhan vao se chuyen trang*@
+                            <a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.MaSP })">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="#">@item.TenSP</a></h3>
+
+                    <h5>@item.GiaBan</h5>
+                </div>
+            </div>
+        </div>
+        <!-- single-product end -->
+    }
+}

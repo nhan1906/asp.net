@@ -106,7 +106,7 @@
                                 <li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11">@Html.ActionLink("Giới thiệu", "Index", "GioiThieu")</li>
                                 <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115">
                                     @Html.ActionLink("Sản phẩm", "Index", "SanPham")
-                                    @Html.Partial("~/Views/SanPham/DanhSachLoaiSanPham.cshtml")
+                                    @Html.Action("LoaiSanPhamMenuChinh", "LoaiSanPham")
                                 </li>
                                 <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">@Html.ActionLink("Bản đồ", "Index", "BanDo")</li>
                                 <li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10">@Html.ActionLink("Liên hệ", "Index", "LienHe")</li>
@@ -117,7 +117,7 @@
                     </div> <!-- end .header-navigation-wrap -->
                 </div> <!-- end .wrap -->
             </div><!-- end #sticky-header -->
-            @RenderSection("RenderSliderImageForFrontPage", required: false);
+            @RenderSection("RenderSliderImageForFrontPage", required: false)
         
         </header> <!-- end #masthead -->
         

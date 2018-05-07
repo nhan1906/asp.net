@@ -92,4 +92,3 @@ D:\project\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.CoreCompileInputs.cache
 D:\project\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.CopyComplete
 D:\project\WebFinal\WebFinal\obj\Debug\WebFinal.dll
 D:\project\WebFinal\WebFinal\obj\Debug\WebFinal.pdb
-D:\project\WebFinal\WebFinal\obj\Debug\WebFinal.csprojResolveAssemblyReference.cache

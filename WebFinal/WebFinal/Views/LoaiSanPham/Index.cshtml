@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutChung.cshtml";
+    ViewBag.Title = "Shop";
+}
+
+<div class="shop-area">
+    <div class="container">
+
+        <div class="row">
+            <!-- left-sidebar start -->
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="main-menu side-menu hidden-xs">
+                    <nav>
+                        @Html.Action("LoaiSanPhamMenuTrai", "LoaiSanPham")
+                    </nav>
+                </div>
+            </div>
+            <!-- left-sidebar end -->
+            <!-- shop-content start -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="shop-content">
+                    <!-- Nav tabs -->
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="padding-top:0px;">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div class="row">
+
+
+
+                                @if (Model.Count == 0)
+                                {
+                                    <h1>@ViewBag.Sach</h1>
+                                }
+
+                                else{
+                                        foreach (var item in Model)
+                                        {
+                                                            <!-- single-product start -->
+                                                            <div style="height:270px" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                                                <div class="single-product">
+                                                                    <div class="product-img">
+                                                                        <a href="@Url.Action("Index", "SanPham", new { @MaSP = item.MaSP })">
+                                                                            <img class="primary-img" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="Sterling Silver Ring">
+                                                                        </a>
+                                                                        <div class="product-action">
+                                                                            <div class="pro-button-top">
+                                                                                @*Xem chi tiet khi nhan vao se chuyen trang*@
+                                                                                <a href="@Url.Action("Index", "SanPham", new { @MaSP = item.MaSP })">Chi tiết</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-info">
+                                                                        <h3><a href="#">@item.TenSP</a></h3>
+
+                                                                        <h5>@item.GiaBan</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- single-product end -->
+                                        }
+                                }
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- shop-content end -->
+    </div>
+</div>
+

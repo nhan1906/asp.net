@@ -1,8 +1,48 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lien Hes";
     Layout = "~/Views/Shared/_LayoutChung.cshtml";
 }
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <h3 class="widget-title">Liên hệ với chúng tôi</h3>
+            <div class="widget_text_big">
+                <ul>
+                    <li><i class="fa fa-clock-o"></i> Giờ mở cửa: 9am-4pm</li>
+                    <li><a title="Địa chỉ" href="#"><i class="fa fa-map-marker"></i> ĐHCNTT</a></li>
+                    <li><a title="SĐT" href="tel:+1234567890"><i class="fa fa-phone-square"></i> (123) 456-7890</a></li>
+                    <li><a title="E-mail" href="mailto:nhantx.1906@gmail.com"><i class="fa fa-envelope-o"></i> nhantx.1906@gmail.com</a></li>
+                    <li><a title="Live chat" href="mailto:nhantx.1906@gmail.com"><i class="fa fa-sk"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <form>
+                <div class="form-group">
+                    <i class="fa fa-user"></i> <label for="exampleInputEmail1">Tên</label>
+                    <input type="email" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Điền tên">
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-building"></i> <label for="exampleInputEmail1">Công ty</label>
+                    <input type="text" class="form-control" id="companyInput" aria-describedby="emailHelp" placeholder="Điền tên công ty">
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-envelope-o"></i> <label for="inputEmail">Địa chỉ e-mail (bắt buộc)</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Điền e-mail" required="true">
+                    <small id="emailHelp" class="form-text text-muted">Chúng tôi không chia sẻ thông tin của quý khách cho bên thứ ba.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Góp ý</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi thông tin</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-<h2>Index</h2>
+
+
+
 

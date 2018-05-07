@@ -151,21 +151,51 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BanDoController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\GioiThieuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LienHeController.cs" />
+    <Compile Include="Controllers\LoaiSanPhamController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BanHangModel.cs" />
-    <Compile Include="Models\ChiTietDonHang.cs" />
-    <Compile Include="Models\DonHang.cs" />
-    <Compile Include="Models\KhachHang.cs" />
-    <Compile Include="Models\LoaiSanPham.cs" />
-    <Compile Include="Models\POST.cs" />
-    <Compile Include="Models\POST_PARENT.cs" />
-    <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\BanHangModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BanHangModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BanHangModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BanHangModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BanHangModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChiTietDonHang.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonHang.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KhachHang.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoaiSanPham.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POST.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POST_PARENT.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SanPham.cs">
+      <DependentUpon>BanHangModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +225,21 @@
     <Content Include="images\posts\banner1.jpg" />
     <Content Include="images\posts\banner2.jpg" />
     <Content Include="images\posts\banner3.jpg" />
+    <Content Include="images\products\IBE-0001.jpg" />
+    <Content Include="images\products\IBE-0002-1.jpg" />
+    <Content Include="images\products\IBE-0002.jpg" />
+    <Content Include="images\products\IBE-0003-1.jpg" />
+    <Content Include="images\products\IBE-0003.jpg" />
+    <Content Include="Models\BanHangModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BanHangModel.edmx</DependentUpon>
+      <LastGenOutput>BanHangModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BanHangModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BanHangModel.edmx</DependentUpon>
+      <LastGenOutput>BanHangModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -205,6 +250,13 @@
     <Content Include="Content\Themes\assets\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Themes\assets\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\Themes\assets\font-awesome\fonts\FontAwesome.otf" />
+    <EntityDeploy Include="Models\BanHangModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BanHangModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BanHangModel.edmx.diagram">
+      <DependentUpon>BanHangModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -232,12 +284,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutChung.cshtml" />
     <Content Include="Views\Home\SliderImagePartial.cshtml" />
-    <Content Include="Views\SanPham\Index.cshtml" />
-    <Content Include="Views\SanPham\XemChiTiet.cshtml" />
     <Content Include="Views\GioiThieu\Index.cshtml" />
     <Content Include="Views\BanDo\Index.cshtml" />
     <Content Include="Views\LienHe\Index.cshtml" />
-    <Content Include="Views\SanPham\DanhSachLoaiSanPham.cshtml" />
+    <Content Include="Views\LoaiSanPham\LoaiSanPhamMenuChinh.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\LoaiSanPham\DanhSachSanPham.cshtml" />
+    <Content Include="Views\LoaiSanPham\LoaiSanPhamMenuTrai.cshtml" />
+    <Content Include="Views\SanPham\Index.cshtml" />
+    <Content Include="Views\LoaiSanPham\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
