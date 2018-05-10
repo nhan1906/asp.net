@@ -201,6 +201,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Themes\assets\font-awesome\css\font-awesome.css" />
     <Content Include="Content\Themes\assets\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\Themes\assets\font-awesome\fonts\fontawesome-webfont.svg" />
@@ -208,28 +209,29 @@
     <Content Include="Content\Themes\assets\sticky\source\jquery.sticky.js" />
     <Content Include="Content\Themes\assets\sticky\source\sticky-settings.js" />
     <Content Include="Content\Themes\assets\sticky\sticky-settings.js" />
-    <Content Include="Content\Themes\assets\wow\css\animate.css" />
-    <Content Include="Content\Themes\assets\wow\css\animate.min.css" />
-    <Content Include="Content\Themes\assets\wow\js\wow-settings.js" />
-    <Content Include="Content\Themes\assets\wow\js\wow.js" />
-    <Content Include="Content\Themes\assets\wow\js\wow.min.js" />
     <Content Include="Content\Themes\css\editor-style.css" />
     <Content Include="Content\Themes\css\responsive.css" />
-    <Content Include="Content\Themes\css\thumbnails-style.css" />
     <Content Include="Content\Themes\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="images\categories\1.jpg" />
+    <Content Include="images\categories\2.jpg" />
+    <Content Include="images\categories\3.jpg" />
+    <Content Include="images\categories\4.jpg" />
+    <Content Include="images\categories\5.jpg" />
+    <Content Include="images\categories\6.jpg" />
     <Content Include="images\posts\banner.jpg" />
     <Content Include="images\posts\banner1.jpg" />
     <Content Include="images\posts\banner2.jpg" />
     <Content Include="images\posts\banner3.jpg" />
-    <Content Include="images\products\IBE-0001.jpg" />
-    <Content Include="images\products\IBE-0002-1.jpg" />
+    <Content Include="images\products\IBE-0010.jpg" />
+    <Content Include="images\products\VTC-0007.jpg" />
     <Content Include="images\products\IBE-0002.jpg" />
-    <Content Include="images\products\IBE-0003-1.jpg" />
-    <Content Include="images\products\IBE-0003.jpg" />
+    <Content Include="images\products\IBE-0004.jpg" />
+    <Content Include="images\products\IBE-0005.jpg" />
+    <Content Include="images\products\IBE-0006.jpg" />
+    <Content Include="images\products\VTC-0011.jpg" />
     <Content Include="Models\BanHangModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BanHangModel.edmx</DependentUpon>
@@ -287,12 +289,25 @@
     <Content Include="Views\GioiThieu\Index.cshtml" />
     <Content Include="Views\BanDo\Index.cshtml" />
     <Content Include="Views\LienHe\Index.cshtml" />
-    <Content Include="Views\LoaiSanPham\LoaiSanPhamMenuChinh.cshtml" />
+    <Content Include="Views\LoaiSanPham\_LoaiSanPhamMenuChinh.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
-    <Content Include="Views\LoaiSanPham\DanhSachSanPham.cshtml" />
-    <Content Include="Views\LoaiSanPham\LoaiSanPhamMenuTrai.cshtml" />
+    <Content Include="Views\LoaiSanPham\_DanhSachSanPham.cshtml" />
+    <Content Include="Views\LoaiSanPham\_LoaiSanPhamMenuTrai.cshtml" />
     <Content Include="Views\SanPham\Index.cshtml" />
     <Content Include="Views\LoaiSanPham\Index.cshtml" />
+    <Content Include="Views\LoaiSanPham\_LoaiSanPhamHome.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Head.cshtml" />
+    <Content Include="Views\Shared\_Footer1.cshtml" />
+    <Content Include="Views\Shared\_Footer2.cshtml" />
+    <Content Include="Views\Shared\_Footer3.cshtml" />
+    <Content Include="Views\Shared\_Footer4.cshtml" />
+    <Content Include="Views\Shared\_FooterScript.cshtml" />
+    <Content Include="Views\Shared\_FooterSocial.cshtml" />
+    <Content Include="Views\Home\Index\_Intro.cshtml" />
+    <Content Include="Views\LoaiSanPham\_Categories.cshtml" />
+    <Content Include="Views\SanPham\_Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -24,6 +24,12 @@ namespace WebFinal.Controllers
             }
             return View(sp);
         }
+
+        public PartialViewResult _Products()
+        {
+            var sanPhams = db.SanPhams.Take(10).ToList();
+            return PartialView(sanPhams);
+        }
         
         
     }

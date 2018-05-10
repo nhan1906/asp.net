@@ -1,59 +1,170 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿ul.b {
+    list-style-type: square;
+    margin-left: 30px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.seach-row {
+    padding-top: 30px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+ul.phone-head- li {
+    float: left;
+    text-align: left;
+    padding-left: 10px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-
-/*You can add your own CSS here.
-
-Click the help icon above to learn more.
-    */
-
-.widget_text ul li i.fa {
-    margin-right: 5px;
-}
-
-.custom-logo-link .custom-logo {
-    width: 50%;
-}
-
-@media only screen and (max-width: 767px) {
-    .custom-logo-link .custom-logo {
-        width: 60%;
+    ul.phone-head- li p {
+        margin: 0px !important;
+        line-height: 8px;
+        color: #FF5722;
     }
-}
 
-@media only screen and (max-width: 480px) {
-    .custom-logo-link .custom-logo {
-        width: 80%;
+    ul.phone-head- li span {
+        font-weight: bold;
+        color: #000;
     }
-}
-img#wpstats {
-    display: none
+
+ul.cart-head-new li {
+    float: left;
 }
 
-/**/
-.panel{
-    text-align: center;
+    ul.cart-head-new li.icon-cart {
+        color: #999;
+        font-size: 26px;
+    }
+
+    ul.cart-head-new li.text-cart {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+        ul.cart-head-new li.text-cart a {
+            color: #000;
+        }
+
+            ul.cart-head-new li.text-cart a:hover {
+                text-decoration: none;
+            }
+
+.top-one {
+    margin-top: 20px;
+    float: right;
 }
 
+.top-two {
+    margin-top: 17px;
+    margin-left: 32px;
+    float: right;
+}
+
+.tabcontent h2 {
+    font-size: 20px;
+}
+
+.tabcontent h3 {
+    font-size: 18px;
+}
+
+.devvn_table {
+    display: table;
+    width: 100%;
+}
+
+.devvn_cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.devvn_form_search {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    overflow: hidden;
+}
+
+.devvn_input_s input {
+    width: 100%;
+    padding: 2px 5px;
+    font-size: 14px;
+    height: 30px;
+    outline: none;
+}
+
+.devvn_button_search button {
+    background: transparent;
+    border: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.devvn_cell.devvn_button_search {
+    width: 30px;
+}
+
+.top_bar {
+    border-bottom: 2px solid #000;
+}
+
+.top_bar_left {
+    float: left;
+    padding: 4px 0;
+}
+
+.top_bar_right {
+    float: right;
+    padding: 4px 0;
+}
+
+ul.devvn_list_contact {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    ul.devvn_list_contact li {
+        float: left;
+        list-style: none;
+    }
+
+        ul.devvn_list_contact li ~ li {
+            margin-left: 25px;
+        }
+
+        ul.devvn_list_contact li a {
+            color: #000;
+        }
+
+            ul.devvn_list_contact li a:hover {
+                color: #000;
+                text-decoration: none;
+            }
+
+.top_bar_right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .top_bar_right ul li {
+        float: left;
+        list-style: none;
+    }
+
+        .top_bar_right ul li a {
+            color: #000;
+        }
+
+        .top_bar_right ul li ~ li {
+            margin-left: 12px;
+            border-left: 1px solid #ccc;
+            padding-left: 12px;
+        }
+
+        .top_bar_right ul li a:hover, .top_bar_right ul li.current-menu-item a {
+            color: #000;
+            text-decoration: underline;
+        }

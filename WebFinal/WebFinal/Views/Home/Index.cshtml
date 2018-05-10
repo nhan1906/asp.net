@@ -17,39 +17,43 @@
     </div> <!-- end .main-slider -->
 }
 
-
-<div class="shop-area">
-    <div class="container">
-
-        <div class="row">
-            <!-- left-sidebar start -->
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="main-menu side-menu hidden-xs">
-                    <nav>
-                        @Html.Action("LoaiSanPhamMenuTrai", "LoaiSanPham")
-                    </nav>
-                </div>
-            </div>
-            <!-- left-sidebar end -->
-            <!-- shop-content start -->
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="shop-content">
-                    <!-- Nav tabs -->
-                    <!-- Tab panes -->
-                    <div class="tab-content" style="padding-top:0px;">
-                        <div role="tabpanel" class="tab-pane active" id="home">
-                            <div class="row">
-                                @Html.Action("DanhSachSanPham", "LoaiSanPham")
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <!-- shop-content end -->
-    </div>
+<div class="container">
+    <section id="main">
+        @RenderPage("~/Views/Home/Index/_Intro.cshtml")
+        @Html.Action("_Categories", "LoaiSanPham")
+        @Html.Action("_Products", "SanPham")
+    </section><!-- End Main container -->
 </div>
+
+
+<style>
+    
+    .devvn_title{
+        text-align: center;
+    }
+    h2.devvn_title {
+        font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,georgia,serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 28px;
+        text-align: center;
+        margin: 10px 0 35px;
+        line-height: 35px;
+        position: relative;
+    }
+
+        h2.devvn_title:after {
+            background: url(images/title-before.png) no-repeat scroll 0 0;
+            bottom: -15px;
+            content: "";
+            height: 8px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            width: 165px;
+            z-index: 99;
+        }
+
+    
+</style>

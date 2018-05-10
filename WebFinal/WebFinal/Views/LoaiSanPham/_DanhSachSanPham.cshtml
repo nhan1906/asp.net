@@ -1,0 +1,51 @@
+﻿@model List<WebFinal.Models.SanPham>
+@{
+                /**/
+
+                foreach (var item in Model)
+                {
+<div class="col-5 devvn_item_prod">
+    <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP" class="tit-tab-2-gl">
+        <img width="300" height="300" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")"
+             class="attachment-medium size-medium wp-post-image" alt="Nhẫn nam mặt đá xanh NN050" title="@item.TenSP"
+             sizes="(max-width: 300px) 100vw, 300px">
+    </a>
+    <div class="tit-tab-gl"><a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.MaSP })" title="@item.TenSP">@item.TenSP</a></div>
+    <div>
+        <span class="price_w price">@item.GiaBan</span> <span class="price_butt">đ</span>
+        <span class=""></span>
+    </div>
+</div>
+                }
+}
+
+<style>
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item {
+        position: relative;
+        border: 1px solid #333;
+        margin: 2%;
+        overflow: hidden;
+        width: 540px;
+    }
+
+        .item img {
+            max-width: 100%;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .item:hover img {
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+</style>

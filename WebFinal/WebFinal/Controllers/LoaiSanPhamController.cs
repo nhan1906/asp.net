@@ -31,23 +31,36 @@ namespace WebFinal.Controllers
         }
 
 
-        public PartialViewResult LoaiSanPhamMenuChinh()
+        public PartialViewResult _LoaiSanPhamMenuChinh()
         {
             var loaiSanPhams = db.LoaiSanPhams.ToList();
             return PartialView(loaiSanPhams);
         }
 
 
-        public PartialViewResult LoaiSanPhamMenuTrai()
+        public PartialViewResult _LoaiSanPhamMenuTrai()
         {
             var loaiSanPhams = db.LoaiSanPhams.ToList();
             return PartialView(loaiSanPhams);
         }
 
-        public PartialViewResult DanhSachSanPham()
+        public PartialViewResult _LoaiSanPhamHome()
+        {
+            var loaiSanPhams = db.LoaiSanPhams.ToList();
+            return PartialView(loaiSanPhams);
+        }
+
+        public PartialViewResult _DanhSachSanPham()
         {
             var sanPhams = db.SanPhams.ToList();
             return PartialView(sanPhams);
+        }
+        
+        //Hiển thị view categories trang chủ
+        public PartialViewResult _Categories()
+        {
+            var loaiSanPhams = db.LoaiSanPhams.ToList();
+            return PartialView(loaiSanPhams);
         }
     }
 }

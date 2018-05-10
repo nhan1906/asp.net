@@ -11,7 +11,7 @@
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="main-menu side-menu hidden-xs">
                     <nav>
-                        @Html.Action("LoaiSanPhamMenuTrai", "LoaiSanPham")
+                        @Html.Action("_LoaiSanPhamMenuTrai", "LoaiSanPham")
                     </nav>
                 </div>
             </div>
@@ -32,32 +32,23 @@
                                     <h1>@ViewBag.Sach</h1>
                                 }
 
-                                else{
-                                        foreach (var item in Model)
-                                        {
-                                                            <!-- single-product start -->
-                                                            <div style="height:270px" class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                                                                <div class="single-product">
-                                                                    <div class="product-img">
-                                                                        <a href="@Url.Action("Index", "SanPham", new { @MaSP = item.MaSP })">
-                                                                            <img class="primary-img" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="Sterling Silver Ring">
-                                                                        </a>
-                                                                        <div class="product-action">
-                                                                            <div class="pro-button-top">
-                                                                                @*Xem chi tiet khi nhan vao se chuyen trang*@
-                                                                                <a href="@Url.Action("Index", "SanPham", new { @MaSP = item.MaSP })">Chi tiết</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="product-info">
-                                                                        <h3><a href="#">@item.TenSP</a></h3>
-
-                                                                        <h5>@item.GiaBan</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- single-product end -->
-                                        }
+                                else
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                    <div class="col-4 devvn_item_prod">
+                                        <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP" class="tit-tab-2-gl">
+                                            <img width="300" height="300" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")"
+                                                 class="attachment-medium size-medium wp-post-image" alt="Nhẫn nam mặt đá xanh NN050" title="@item.TenSP"
+                                                 sizes="(max-width: 300px) 100vw, 300px">
+                                        </a>
+                                        <div class="tit-tab-gl"><a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.MaSP })" title="@item.TenSP">@item.TenSP</a></div>
+                                        <div>
+                                            <span class="price_w price">@item.GiaBan</span> <span class="price_butt">đ</span>
+                                            <span class=""></span>
+                                        </div>
+                                    </div>
+                                    }
                                 }
                             </div>
 
@@ -73,3 +64,79 @@
     </div>
 </div>
 
+<style>
+    .scroller {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .col-4 {
+        width: 25%;
+        float: left;
+        padding: 0 5px;
+    }
+
+    .row .col-4:nth-child(4n+1) {
+        clear: both;
+    }
+
+    .devvn_item_prod {
+        margin-bottom: 20px;
+    }
+
+    .tit-tab-gl {
+        padding: 5px 0;
+    }
+
+    div#devvn-owl-tab-home .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .devvn_hangmoi, .devvn_hangxemnhieu {
+        margin-bottom: 30px;
+    }
+
+    .copyright-text {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+    }
+
+    .devvn_item_prod a,
+    .tit-tab-gl a {
+        color: #888;
+    }
+
+    body h2.tit-pro-gl a {
+        font-size: 14px;
+        line-height: 19px;
+        color: #888;
+    }
+
+        .devvn_item_prod a:hover,
+        .tit-tab-gl a:hover,
+        body h2.tit-pro-gl a:hover {
+            color: #000;
+            text-decoration: none;
+            display: block;
+        }
+
+    body h2.tit-pro-gl {
+        margin: 10px 0 3px;
+    }
+    .price {
+        font-size: 12px;
+        color: #FF0000;
+    }
+
+    .devvn_item_prod .wp-post-image {
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid rgba(0,0,0,125);
+    }
+    .devvn_item_prod:hover .wp-post-image {
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+</style>
