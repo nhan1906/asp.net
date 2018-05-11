@@ -160,42 +160,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BanHangModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BanHangModel.Context.tt</DependentUpon>
+    <Compile Include="Migrations\201805101324593_ThemTruongTrangThaiVaoSanPham.cs" />
+    <Compile Include="Migrations\201805101324593_ThemTruongTrangThaiVaoSanPham.Designer.cs">
+      <DependentUpon>201805101324593_ThemTruongTrangThaiVaoSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BanHangModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BanHangModel.tt</DependentUpon>
+    <Compile Include="Migrations\201805101355070_ThemBangThongTinCuaHang.cs" />
+    <Compile Include="Migrations\201805101355070_ThemBangThongTinCuaHang.Designer.cs">
+      <DependentUpon>201805101355070_ThemBangThongTinCuaHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BanHangModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BanHangModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DonHang.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KhachHang.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LoaiSanPham.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\POST.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\POST_PARENT.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SanPham.cs">
-      <DependentUpon>BanHangModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BanHangModel.cs" />
+    <Compile Include="Models\ChiTietDonHang.cs" />
+    <Compile Include="Models\DonHang.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\LoaiSanPham.cs" />
+    <Compile Include="Models\POST.cs" />
+    <Compile Include="Models\POST_PARENT.cs" />
+    <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\ThongTinCuaHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -232,16 +214,6 @@
     <Content Include="images\products\IBE-0005.jpg" />
     <Content Include="images\products\IBE-0006.jpg" />
     <Content Include="images\products\VTC-0011.jpg" />
-    <Content Include="Models\BanHangModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BanHangModel.edmx</DependentUpon>
-      <LastGenOutput>BanHangModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BanHangModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BanHangModel.edmx</DependentUpon>
-      <LastGenOutput>BanHangModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -252,13 +224,6 @@
     <Content Include="Content\Themes\assets\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Themes\assets\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\Themes\assets\font-awesome\fonts\FontAwesome.otf" />
-    <EntityDeploy Include="Models\BanHangModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BanHangModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BanHangModel.edmx.diagram">
-      <DependentUpon>BanHangModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -329,6 +294,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805101324593_ThemTruongTrangThaiVaoSanPham.resx">
+      <DependentUpon>201805101324593_ThemTruongTrangThaiVaoSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805101355070_ThemBangThongTinCuaHang.resx">
+      <DependentUpon>201805101355070_ThemBangThongTinCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

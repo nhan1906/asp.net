@@ -10,7 +10,7 @@ namespace WebFinal.Controllers
     public class SanPhamController : Controller
     {
 
-        BanHangEntities db = new BanHangEntities();
+        BanHangModel db = new BanHangModel();
         
 
         public ViewResult Index(int maSP=-1)

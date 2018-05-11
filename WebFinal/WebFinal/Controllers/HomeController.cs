@@ -9,7 +9,7 @@ namespace WebFinal.Controllers
 {
     public class HomeController : Controller
     {
-        BanHangEntities db = new BanHangEntities();
+        BanHangModel db = new BanHangModel();
 
         public ActionResult Index()
         {

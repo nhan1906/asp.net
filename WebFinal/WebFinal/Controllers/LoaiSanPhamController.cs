@@ -10,7 +10,7 @@ namespace WebFinal.Controllers
     public class LoaiSanPhamController : Controller
     {
 
-        BanHangEntities db = new BanHangEntities();
+        BanHangModel db = new BanHangModel();
 
         // GET: SanPham
         public ViewResult Index(int MaLoaiSP = -1)
