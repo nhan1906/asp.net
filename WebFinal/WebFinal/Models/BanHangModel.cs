@@ -23,9 +23,6 @@ namespace WebFinal.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChiTietDonHang>()
-                .Property(e => e.DonGian)
-                .IsFixedLength();
 
             modelBuilder.Entity<DonHang>()
                 .HasMany(e => e.ChiTietDonHangs)

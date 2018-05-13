@@ -1,0 +1,81 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+
+@model PagedList.PagedList<WebFinal.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới sản phẩm", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().GiaBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().AnhBia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayCapNhat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaLoaiSP)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                <img src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" width="100" height="100"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayCapNhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoaiSP)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { id = item.MaSP }) |
+                @Html.ActionLink("Chi tiết", "ChiTiet", new { id = item.MaSP }) |
+                @Html.ActionLink("Xóa", "Xoa", new { id = item.MaSP })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@*Tạo link liên kết các trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.Count;
+
+@Html.PagedListPager(Model, page => Url.Action("Index", "QuanLySanPham", new { page = page }))

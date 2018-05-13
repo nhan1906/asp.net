@@ -10,6 +10,8 @@ namespace WebFinal.Controllers
     {
 
         BanHangModel db = new BanHangModel();
+
+        #region Giỏ hàng
         // Lấy giỏ hàng;
         public List<ChiTietDonDat> LayGioHang()
         {
@@ -146,6 +148,41 @@ namespace WebFinal.Controllers
             return PartialView();
         }
 
-    
+        #endregion
+        #region Đặt hàng
+        //Xây dựng chức năng đặt hàng
+        public ActionResult DatHang()
+        {
+            //Kiểm tra đăng nhập
+            if(Session["TaiKhoan"] == null || Session["TaiKhoan"] == "")
+            {
+                return RedirectToAction("DangNhap", "NguoiDung");
+            }
+            //Kiểm tra giỏ hàng
+            if(Session["GioHang"] == null)
+            {
+                RedirectToAction("Index", "Home");
+            }
+            DonHang ddh = new DonHang();
+            KhachHang kh = (KhachHang)Session["TaiKhoan"];
+            List<ChiTietDonDat> gioHang = LayGioHang();
+            ddh.MaKH = kh.MaKH;
+            ddh.NgayDat = DateTime.Now;
+            db.DonHangs.Add(ddh);
+            db.SaveChanges();
+            //Thêm chi tiết đơn hàng
+            foreach(var item in gioHang)
+            {
+                ChiTietDonHang ctDH = new ChiTietDonHang();
+                ctDH.MaDonHang = ddh.MaDonHang;
+                ctDH.MaSP = item.iMaSP;
+                ctDH.SoLuong = item.iSoLuong;
+                ctDH.DonGia = item.dDonGia;
+                db.ChiTietDonHangs.Add(ctDH);
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        #endregion
     }
 }

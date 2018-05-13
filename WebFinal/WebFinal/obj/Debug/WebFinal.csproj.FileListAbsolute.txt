@@ -187,9 +187,6 @@ C:\Users\James\Desktop\asp\asp.net\WebFinal\WebFinal\bin\roslyn\System.IO.FileSy
 C:\Users\James\Desktop\asp\asp.net\WebFinal\WebFinal\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\James\Desktop\asp\asp.net\WebFinal\WebFinal\bin\roslyn\System.Security.Cryptography.Primitives.dll
 C:\Users\James\Desktop\asp\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csprojResolveAssemblyReference.cache
-C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.CoreCompileInputs.cache
-C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.dll
-C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.pdb
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\ApplicationInsights.config
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\WebFinal.dll.config
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\WebFinal.dll
@@ -255,6 +252,8 @@ C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.ApplicationInsi
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Newtonsoft.Json.dll
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\PagedList.dll
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\PagedList.Mvc.dll
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\System.Web.Helpers.dll
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\System.Web.Mvc.dll
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\System.Web.Optimization.dll
@@ -266,6 +265,8 @@ C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\WebGrease.dll
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\EntityFramework.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\EntityFramework.SqlServer.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\PagedList.xml
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\PagedList.Mvc.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\System.Web.Helpers.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\System.Web.Mvc.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\System.Web.Optimization.xml
@@ -280,9 +281,13 @@ C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.AI.DependencyCo
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\bin\Microsoft.AI.Web.xml
-C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.CopyComplete
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.ThemTruongTrangThaiVaoSanPham.resources
-C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.GenerateResource.cache
-C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csprojResolveAssemblyReference.cache
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.ThemBangThongTinCuaHang.resources
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.ChangeSeedAndModelKhachHang.resources
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.SuaModelChiTietDonHang.resources
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.ThemCacThuocTinhVaRangBuocChoBangSanPham.resources
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.GenerateResource.cache
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.CoreCompileInputs.cache
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.CopyComplete
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.dll
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.pdb

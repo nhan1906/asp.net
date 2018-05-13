@@ -20,9 +20,8 @@ namespace WebFinal.Models
         public int MaSP { get; set; }
 
         public int? SoLuong { get; set; }
-
-        [StringLength(10)]
-        public string DonGian { get; set; }
+        
+        public Double DonGia { get; set; }
 
         public virtual DonHang DonHang { get; set; }
 

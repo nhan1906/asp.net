@@ -1,4 +1,4 @@
-namespace WebFinal.Models
+﻿namespace WebFinal.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,22 +16,26 @@ namespace WebFinal.Models
         }
 
         [Key]
+        [Display(Name = "Mã sản phẩm")]
         public int MaSP { get; set; }
 
         [StringLength(100)]
+        [Display(Name = "Tên sản phẩm")]
         public string TenSP { get; set; }
-
+        [Display(Name = "Giá bán")]
         public decimal? GiaBan { get; set; }
-
+        [Display(Name = "Mô tả")]
         public string MoTa { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Ảnh")]
         public string AnhBia { get; set; }
-
+        [Display(Name = "Trạng thái")]
         public int TrangThai { get; set; }
-
+        [Display(Name = "Ngày cập nhật")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? NgayCapNhat { get; set; }
-
+        [Display(Name = "Mã loại sản phẩm")]
         public int? MaLoaiSP { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

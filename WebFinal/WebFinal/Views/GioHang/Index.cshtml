@@ -35,4 +35,12 @@
             </td>
         </tr>
     }
+    <tr>
+        <td colspan="6" style="text-align:left">
+            @using (Html.BeginForm("DatHang", "GioHang"))
+            {
+                <input type="submit" value="Đặt hàng"/>
+            }
+        </td>
+    </tr>
 </table>

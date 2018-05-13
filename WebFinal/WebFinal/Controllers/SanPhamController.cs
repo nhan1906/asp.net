@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebFinal.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace WebFinal.Controllers
 {
@@ -25,10 +27,13 @@ namespace WebFinal.Controllers
             return View(sp);
         }
 
-        public PartialViewResult _Products()
+        public PartialViewResult _Products(int? page)
         {
-            var sanPhams = db.SanPhams.Take(10).ToList();
-            return PartialView(sanPhams);
+            //Tạo biến số sản phẩm trên trang
+            int pageSize = 4;
+            //Tạo biến số trang
+            int pageNumber = (page ?? 1);
+            return PartialView(db.SanPhams.ToList().OrderBy(n=> n.GiaBan).ToPagedList(pageNumber, pageSize));
         }
         
         
