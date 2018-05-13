@@ -280,7 +280,7 @@
     <Content Include="Views\SanPham\_Products.cshtml" />
     <Content Include="Views\NguoiDung\DangKy.cshtml" />
     <Content Include="Views\NguoiDung\DangNhap.cshtml" />
-    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
     <Content Include="Views\GioHang\_GioHangPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>

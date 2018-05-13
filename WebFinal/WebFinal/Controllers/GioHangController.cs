@@ -71,7 +71,7 @@ namespace WebFinal.Controllers
                 donHang.iSoLuong = int.Parse(f["txtSoLuong"].ToString());
 
             }
-            return View("GioHang");
+            return RedirectToAction("Index");
         }
 
         //Xóa giỏ hàng
@@ -98,11 +98,11 @@ namespace WebFinal.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            return RedirectToAction("GioHang");
+            return RedirectToAction("Index");
 
         }
 
-        public ActionResult GioHang()
+        public ActionResult Index()
         {
             if (Session["GioHang"] == null)
             {
@@ -145,5 +145,7 @@ namespace WebFinal.Controllers
             ViewBag.TongTien = TongTien();
             return PartialView();
         }
+
+    
     }
 }

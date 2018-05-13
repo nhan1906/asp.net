@@ -1,0 +1,38 @@
+﻿@model List<WebFinal.Models.ChiTietDonDat>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutChung.cshtml";
+}
+
+<h2>GioHang</h2>
+
+<table>
+    <tr>
+        <td>Mã sản phẩm</td>
+        <td>Tên sản phẩm</td>
+        <td>Ảnh bìa</td>
+        <td>Đơn giá</td>
+        <td>Số lượng</td>
+        <td>Thành tiền</td>
+        <td>Thao tác</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.iMaSP</td>
+            <td><a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.iMaSP })">@item.sTenSP</a></td>
+            <td><a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.iMaSP })"><img src="@Url.Content("~/images/products/" + item.sHinhAnh + ".jpg")" width="100" height="100" /></a></td>
+            <td>@item.dDonGia</td>
+            @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @MaSP = item.iMaSP,  }))
+            {
+              <td>@Html.TextBox("txtSoLuong", @item.iSoLuong)</td>
+            }
+            <td>@item.ThanhTien</td>
+            <td>
+                @Html.ActionLink("Xóa", "XoaGioHang", new { @MaSP = item.iMaSP })
+            </td>
+        </tr>
+    }
+</table>
