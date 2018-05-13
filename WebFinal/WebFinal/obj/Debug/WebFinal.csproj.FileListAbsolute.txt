@@ -285,3 +285,4 @@ C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csproj.GenerateResource.cache
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.csprojResolveAssemblyReference.cache
 C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.ThemBangThongTinCuaHang.resources
+C:\Users\James\Desktop\b\asp.net\WebFinal\WebFinal\obj\Debug\WebFinal.Migrations.ChangeSeedAndModelKhachHang.resources

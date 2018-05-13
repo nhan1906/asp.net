@@ -61,10 +61,10 @@
                         <tr class="row_att">
                             <td class="item_property_name">Mua hàng</td>
                             <td>
-                                <form action="#" method="post">
-                                    <input type="hidden" name="pid" value="11348">
-                                    <input type="button" name="addToCart" id="addToCart" value="THÊM VÀO GIỎ HÀNG" class="wp-button" style="cursor: pointer;">
-                                </form>
+                               @using (Html.BeginForm("ThemGioHang", "GioHang", new { @MaSP = Model.MaSP, @strUrl = Request.Url.ToString() }))
+                                    {
+                                        <input type="submit" name="addToCart" id="addToCart" value="THÊM VÀO GIỎ HÀNG" class="wp-button" style="cursor: pointer;">
+                                    } 
                             </td>
                         </tr>
                         <tr class="row_att">

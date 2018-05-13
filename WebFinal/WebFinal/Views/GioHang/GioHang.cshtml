@@ -1,0 +1,31 @@
+﻿@model List<WebFinal.Models.ChiTietDonDat>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutChung.cshtml";
+}
+
+<h2>GioHang</h2>
+
+<table>
+    <tr>
+        <td>Mã sản phẩm</td>
+        <td>Tên sản phẩm</td>
+        <td>Ảnh bìa</td>
+        <td>Đơn giá</td>
+        <td>Số lượng</td>
+        <td>Thành tiền</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.iMaSP</td>
+            <td>@item.sTenSP</td>
+            <td><img src="@Url.Content("~/images/products/" + item.sHinhAnh + ".jpg")" width="50" height="50"/></td>
+            <td>@item.dDonGia</td>
+            <td>@item.iSoLuong</td>
+            <td>@item.ThanhTien</td>
+        </tr>
+    }
+</table>

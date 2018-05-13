@@ -152,10 +152,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BanDoController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\GioiThieuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LienHeController.cs" />
     <Compile Include="Controllers\LoaiSanPhamController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -168,10 +170,15 @@
     <Compile Include="Migrations\201805101355070_ThemBangThongTinCuaHang.Designer.cs">
       <DependentUpon>201805101355070_ThemBangThongTinCuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805121317163_ChangeSeedAndModelKhachHang.cs" />
+    <Compile Include="Migrations\201805121317163_ChangeSeedAndModelKhachHang.Designer.cs">
+      <DependentUpon>201805121317163_ChangeSeedAndModelKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BanHangModel.cs" />
     <Compile Include="Models\ChiTietDonHang.cs" />
     <Compile Include="Models\DonHang.cs" />
+    <Compile Include="Models\ChiTietDonDat.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiSanPham.cs" />
     <Compile Include="Models\POST.cs" />
@@ -207,13 +214,11 @@
     <Content Include="images\posts\banner1.jpg" />
     <Content Include="images\posts\banner2.jpg" />
     <Content Include="images\posts\banner3.jpg" />
-    <Content Include="images\products\IBE-0010.jpg" />
-    <Content Include="images\products\VTC-0007.jpg" />
-    <Content Include="images\products\IBE-0002.jpg" />
-    <Content Include="images\products\IBE-0004.jpg" />
-    <Content Include="images\products\IBE-0005.jpg" />
-    <Content Include="images\products\IBE-0006.jpg" />
-    <Content Include="images\products\VTC-0011.jpg" />
+    <Content Include="images\products\NB00001.jpg" />
+    <Content Include="images\products\NB00002.jpg" />
+    <Content Include="images\products\NB00003.jpg" />
+    <Content Include="images\products\NB00004.jpg" />
+    <Content Include="images\products\NB00005.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -273,6 +278,10 @@
     <Content Include="Views\Home\Index\_Intro.cshtml" />
     <Content Include="Views\LoaiSanPham\_Categories.cshtml" />
     <Content Include="Views\SanPham\_Products.cshtml" />
+    <Content Include="Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\_GioHangPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805101355070_ThemBangThongTinCuaHang.resx">
       <DependentUpon>201805101355070_ThemBangThongTinCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121317163_ChangeSeedAndModelKhachHang.resx">
+      <DependentUpon>201805121317163_ChangeSeedAndModelKhachHang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
