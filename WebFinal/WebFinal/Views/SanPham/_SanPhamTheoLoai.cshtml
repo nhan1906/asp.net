@@ -1,0 +1,112 @@
+﻿@model List<WebFinal.Models.SanPham>
+
+<div class="row">
+    <div class="col-sm-1 v-center">
+        <a class="left fa fa-chevron-left btn icon-indicator-nhan" href="#carousel-example" 
+           data-slide="prev"></a>
+    </div><!--
+    --><div class="col-sm-10 v-center">
+
+        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+
+                        @if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="col-md-15 col-sm-4 product-block">
+                                    <div class="col-item">
+                                        <div class="photo">
+                                            @*Hiển thị hình ảnh sản phẩm*@
+                                            <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP">
+                                                <img class="img-responsive" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="@item.TenSP" title="@item.TenSP">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="text-center">
+                                                <div class="price">
+                                                    @if(item.TenSP.Length > 25)
+                                                     {
+                                                        <h5>
+                                                            @item.TenSP.Substring(0, 25) ...
+                                                        </h5>
+                                                    }
+                                                    else
+                                                    {
+                                                        <h5>
+                                                            @item.TenSP
+                                                        </h5>
+                                                    }
+                                                    <h5 class="price-text-color">
+                                                        @item.GiaBan VNĐ
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix text-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+
+                        @if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="col-md-15 col-sm-4 product-block">
+
+                                    <div class="col-item">
+                                        <div class="photo">
+                                            @*Hiển thị hình ảnh sản phẩm*@
+                                            <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP">
+                                                <img class="img-responsive" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="@item.TenSP" title="@item.TenSP">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <div class="text-center">
+                                                <div class="price">
+                                                    @if(item.TenSP.Length > 25)
+                                                     {
+                                                        <h5>
+                                                            @item.TenSP.Substring(0, 25) ...
+                                                        </h5>
+                                                    }
+                                                    else
+                                                    {
+                                                        <h5>
+                                                            @item.TenSP
+                                                        </h5>
+                                                    }
+                                                    <h5 class="price-text-color">
+                                                        @item.GiaBan VNĐ
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix text-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--
+    --><div class="col-sm-1 v-center">
+        <a class="right fa fa-chevron-right btn icon-indicator-nhan" href="#carousel-example"
+           data-slide="next"></a>
+    </div>
+</div>
+

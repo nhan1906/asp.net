@@ -2,10 +2,13 @@
 
 <html>
 @RenderPage("~/Views/Shared/_Head.cshtml")
-<body class="home page-template page-template-page-templates page-template-excellent-corporate page-template-page-templatesexcellent-corporate-php page page-id-4 custom-background wp-custom-logo boxed-layout  excellent-corporate">
+@RenderSection("ThemJsChoTungPage", required: false)
+</head>
+
+<body>
 
     <div id="page" class="site">
-        @RenderPage("~/Views/Shared/_Header.cshtml")
+        @RenderPage("~/Views/Shared/Header/_Header.cshtml")
         <!-- end #sticky-header -->
         @RenderSection("RenderSliderImageForFrontPage", required: false)
         <div class="site-content-contain">

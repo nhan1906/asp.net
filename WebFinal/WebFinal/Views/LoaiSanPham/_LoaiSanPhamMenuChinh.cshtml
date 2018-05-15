@@ -1,13 +1,10 @@
 ﻿@model List<WebFinal.Models.LoaiSanPham>
-
-<ul class="sub-menu">
-    @if (Model != null)
+@if (Model != null)
+{
+    foreach (var item in Model)
     {
-        foreach (var item in Model)
-        {
-            <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112">
-              <a href="@Url.Action("Index", "LoaiSanPham", new { @MaLoaiSP=item.MaLoaiSP})">@item.TenLoaiSP</a>
+        <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
+            <a href="@Url.Action("Index", "LoaiSanPham", new { @MaLoaiSP=item.MaLoaiSP})">@item.TenLoaiSP</a>
             </li>
-        }
     }
-</ul>
+}

@@ -4,17 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>@ViewBag.Title</title>
 
-    @*Tăng tốc độ tải trang với dns-prefetch*@
-    <link rel='dns-prefetch' href='//s0.wp.com' />
-    <link rel='dns-prefetch' href='//secure.gravatar.com' />
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
-
     @*Stylesheet for web*@
-    <link rel='stylesheet' href="~/Content/Themes/style.css" rel="stylesheet" type='text/css' media='all'/>
+    @Styles.Render("~/Content/css")
+    @*<link rel='stylesheet' href="~/Content/Themes/style.css" rel="stylesheet" type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-css' href='~/Content/Themes/assets/font-awesome/css/font-awesome.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='excellent-responsive-css' href='~/Content/Themes/css/responsive.css' type='text/css' media='all' />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    @*Js*@
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
+    <link href="~/Content/Site.css" rel="stylesheet" />*@
+    

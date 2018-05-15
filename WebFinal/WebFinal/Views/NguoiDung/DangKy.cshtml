@@ -1,21 +1,41 @@
-﻿@model WebFinal.Models.KhachHang
+﻿@using System.Web.UI.WebControls
+@model WebFinal.Models.KhachHang
 
 @{
     ViewBag.Title = "DangKy";
     Layout = "~/Views/Shared/_LayoutChung.cshtml";
 }
 
-<h2>DangKy</h2>
 
-<div style="margin: 0 100px;">
-    @using (Html.BeginForm())
+
+<h2>Đăng ký</h2>
+
+@if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+{
+    if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success">
+            <strong>"Hoàn tất! </strong>@ViewBag.Message
+        </div>
+    }
+}
+else
+{
+
+    using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>KhachHang</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.HoTen, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
             <div class="form-group">
                 @Html.LabelFor(model => model.TaiKhoan, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -34,10 +54,27 @@
             </div>
 
             <div class="form-group">
+                @Html.LabelFor(model => model.XacNhanMatKhau, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.XacNhanMatKhau, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.XacNhanMatKhau, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
                 @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    @Html.ValidationMessage("AccountExist", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -50,57 +87,39 @@
             </div>
 
             <div class="form-group">
+                @Html.LabelFor(model => model.GioiTinh, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.GioiTinh, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NgaySinh, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input id="btnDangKyUser" type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Create" class="btn btn-default" />
                 </div>
             </div>
         </div>
+        if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <strong>Lỗi xảy ra: </strong>@ViewBag.Message
+            </div>
+        }
     }
+}
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
+<div>
+    @Html.ActionLink("DangNhap", "DangNhap")
 </div>
 
 
-<!--
-<script type="text/javascript">
-    $("#btnDangKyUser").click(function () {
-        var loi = 0;
-        if ($('#TaiKhoan').val() == "") {
-            $('#loiTaiKhoan').text("Tên đăng nhập là bắt buộc!");
-            loi++;
-        }
-        else {
-            $('#loiTaiKhoan').text("");
-        }
-        if ($('#MatKhau').val() == "") {
-            $('#loiMatKhau').text("Mật khẩu là bắt buộc!");
-            loi++;
-        }
-        else {
-            $('#loiMatKhau').text("");
-        }
-        if ($('#Email').val() == "") {
-            $('#loiEmail').text("Email là bắt buộc!");
-            loi++;
-        }
-        else {
-            $('#loiEmail').text("");
-        }
-        if ($('#DienThoai').val() == "") {
-            $('#loiDienThoai').text("Số điện thoại là bắt buộc!");
-            loi++;
-        }
-        else {
-            $('#loiDienThoai').text("");
-        }
 
-        if (loi != 0) {
-            return false;
-        } else {
-            return true;
-        }
-    });
-</script>
-    -->

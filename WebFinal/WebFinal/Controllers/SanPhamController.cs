@@ -27,15 +27,20 @@ namespace WebFinal.Controllers
             return View(sp);
         }
 
-        public PartialViewResult _Products(int? page)
+ /*       public PartialViewResult _Products(int? page)
         {
             //Tạo biến số sản phẩm trên trang
-            int pageSize = 4;
+            int pageSize = 10;
             //Tạo biến số trang
             int pageNumber = (page ?? 1);
             return PartialView(db.SanPhams.ToList().OrderBy(n=> n.GiaBan).ToPagedList(pageNumber, pageSize));
         }
-        
+*/
+        public PartialViewResult _SanPhamTheoLoai(int MaLoaiSP)
+        {
+            var sanPhams = db.SanPhams.Where(n => n.MaLoaiSP == MaLoaiSP).Take(10).ToList();
+            return PartialView(sanPhams);
+        }
         
     }
 } 

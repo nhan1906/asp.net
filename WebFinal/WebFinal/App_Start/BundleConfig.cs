@@ -9,7 +9,12 @@ namespace WebFinal
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/sticky-settings.js",
+                        "~/Scripts/jquery.sticky.min.js",
+                        "~/Scripts/excellent-main.js",
+                        "~/Scripts/jquery.flexslider.js",
+                        "~/Scripts/flexslider-setting.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -24,7 +29,10 @@ namespace WebFinal
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/font-awesome.min.cs",
+                      "~/Content/responsive.css",
+                      "~/Content/style.css",
                       "~/Content/site.css"));
         }
     }

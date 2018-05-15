@@ -1,170 +1,251 @@
-﻿ul.b {
-    list-style-type: square;
-    margin-left: 30px;
+﻿/*center vertical các cột size lớn bé*/
+.v-center {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+/*Top bar giỏ hàng và đăng nhập*/
+.top-bar-nhan {
+    margin: 5px 10px;
+}
+.icon-topbar-nhan {
+    font-size: 12px;
+    color: black;
+}
+.icon-topbar-nhan i {
+    font-size: 20px;
+    margin-right: 6px;
 }
 
-.seach-row {
-    padding-top: 30px;
+/*Phần giới thiệu về shop*/
+.about-tara-h {
+    padding: 60px 0;
+    background: url(/images/logo/bg-about-h.jpg) center center repeat-x;
+    text-align: center;
+    min-height: 395px;
+    margin-top: 20px;
+    background-size: cover;
+}
+.about-tara-h a {
+    color: #58595b;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    border-top: 1px solid #d21d2a;
 }
 
-ul.phone-head- li {
+.about-tara-h h5 {
+    color: #58595b;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: url(/images/logo/bor-about-h.png) no-repeat bottom center;
+    padding: 20px;
+}
+
+
+/*Hiển thị sản phẩm nổi bật trang chủ*/
+
+/*Sản phẩm*/
+
+/*Css 5 column*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.col-xs-15 {
+    width: 20%;
     float: left;
-    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+/*Thanh tiêu đề*/
+.header-title {
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+.header-title h2 {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 22px;
+    margin: 20px 0 40px;
+}
+.header-title h2::after {
+    position: absolute;
+    margin: 0 auto;
+    content: "";
+    border-bottom: 4px solid #fb876b;
+    width: 60%;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+ }
+
+/*list sp*/
+
+
+
+
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+.col-item {
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
+}
+
+    .col-item .photo img {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .col-item .info {
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+        margin-top: 1px;
+    }
+
+    .col-item:hover .info {
+        background-color: #F5F5DC;
+    }
+
+    .col-item .price {
+        /*width: 50%;*/
+        float: left;
+        margin-top: 5px;
+    }
+
+        .col-item .price h5 {
+            line-height: 20px;
+            margin: 0;
+        }
+
+.price-text-color {
+    color: #219FD1;
+}
+
+.col-item .info .rating {
+    color: #777;
+}
+
+.col-item .rating {
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+.col-item .separator {
+    border-top: 1px solid #E1E1E1;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.col-item .separator p {
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+    .col-item .separator p i {
+        margin-right: 5px;
+    }
+
+.col-item .btn-add {
+    width: 50%;
+    float: left;
+}
+
+.col-item .btn-add {
+    border-right: 1px solid #E1E1E1;
+}
+
+.col-item .btn-details {
+    width: 50%;
+    float: left;
     padding-left: 10px;
 }
 
-    ul.phone-head- li p {
-        margin: 0px !important;
-        line-height: 8px;
-        color: #FF5722;
-    }
-
-    ul.phone-head- li span {
-        font-weight: bold;
-        color: #000;
-    }
-
-ul.cart-head-new li {
-    float: left;
-}
-
-    ul.cart-head-new li.icon-cart {
-        color: #999;
-        font-size: 26px;
-    }
-
-    ul.cart-head-new li.text-cart {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-        ul.cart-head-new li.text-cart a {
-            color: #000;
-        }
-
-            ul.cart-head-new li.text-cart a:hover {
-                text-decoration: none;
-            }
-
-.top-one {
+.controls {
     margin-top: 20px;
+}
+
+[data-slide="prev"] {
+    margin-right: 10px;
+}
+
+
+/*Popup*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
     float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.top-two {
-    margin-top: 17px;
-    margin-left: 32px;
-    float: right;
-}
-
-.tabcontent h2 {
-    font-size: 20px;
-}
-
-.tabcontent h3 {
-    font-size: 18px;
-}
-
-.devvn_table {
-    display: table;
-    width: 100%;
-}
-
-.devvn_cell {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.devvn_form_search {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    overflow: hidden;
-}
-
-.devvn_input_s input {
-    width: 100%;
-    padding: 2px 5px;
-    font-size: 14px;
-    height: 30px;
-    outline: none;
-}
-
-.devvn_button_search button {
-    background: transparent;
-    border: 0;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px;
-    margin: 0;
-    width: 100%;
-}
-
-.devvn_cell.devvn_button_search {
-    width: 30px;
-}
-
-.top_bar {
-    border-bottom: 2px solid #000;
-}
-
-.top_bar_left {
-    float: left;
-    padding: 4px 0;
-}
-
-.top_bar_right {
-    float: right;
-    padding: 4px 0;
-}
-
-ul.devvn_list_contact {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-    ul.devvn_list_contact li {
-        float: left;
-        list-style: none;
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }
-
-        ul.devvn_list_contact li ~ li {
-            margin-left: 25px;
-        }
-
-        ul.devvn_list_contact li a {
-            color: #000;
-        }
-
-            ul.devvn_list_contact li a:hover {
-                color: #000;
-                text-decoration: none;
-            }
-
-.top_bar_right ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-    .top_bar_right ul li {
-        float: left;
-        list-style: none;
-    }
-
-        .top_bar_right ul li a {
-            color: #000;
-        }
-
-        .top_bar_right ul li ~ li {
-            margin-left: 12px;
-            border-left: 1px solid #ccc;
-            padding-left: 12px;
-        }
-
-        .top_bar_right ul li a:hover, .top_bar_right ul li.current-menu-item a {
-            color: #000;
-            text-decoration: underline;
-        }

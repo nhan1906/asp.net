@@ -65,9 +65,9 @@
                 @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoaiSP)
             </td>
             <td>
-                @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { id = item.MaSP }) |
-                @Html.ActionLink("Chi tiết", "ChiTiet", new { id = item.MaSP }) |
-                @Html.ActionLink("Xóa", "Xoa", new { id = item.MaSP })
+                @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { @MaSP = item.MaSP }) |
+                @Html.ActionLink("Chi tiết", "ChiTiet", new { @MaSP = item.MaSP }) |
+                @Html.ActionLink("Xóa", "Xoa", new { @MaSP = item.MaSP })
             </td>
         </tr>
     }

@@ -3,14 +3,11 @@
     <div class="widget-wrap">
         <div class="wrap">
             <div class="widget-area">
-                @RenderPage("~/Views/Shared/_Footer1.cshtml")
-                @RenderPage("~/Views/Shared/_Footer2.cshtml")
-                @RenderPage("~/Views/Shared/_Footer3.cshtml")
-                @RenderPage("~/Views/Shared/_Footer4.cshtml")
+                @*Footer*@
             </div> <!-- end .widget-area -->
         </div><!-- end .wrap -->
     </div> <!-- end .widget-wrap -->
-    
+
     <a class="go-to-top">
         <span class="icon-bg"></span>
         <span class="back-to-top-text">Top</span>
@@ -21,4 +18,13 @@
 <!-- end #page -->
 <div style="display:none">
 </div>
-@RenderPage("~/Views/Shared/_FooterScript.cshtml")
+@Scripts.Render("~/bundles/jquery")
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var excellent_slider_value = { "excellent_animation_effect": "slide", "excellent_slideshowSpeed": "5000", "excellent_animationSpeed": "700", "excellent_direction": "horizontal" };
+            /* ]]> */
+</script>
+</body>
+</html>
+
+

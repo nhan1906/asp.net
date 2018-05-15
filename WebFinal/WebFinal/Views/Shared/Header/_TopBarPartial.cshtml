@@ -1,0 +1,33 @@
+﻿@*Top bar*@
+<div class="row top-bar-nhan">
+        <div class="col-sm-4 v-center">
+            <div class="header-social-block">
+                <div class="social-links clearfix">
+                    <ul>
+                        <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="@Url.Content("https://www.facebook.com/TrangSucBacCaoCapCherryCap")"><span class="screen-reader-text">Facebook</span></a></li>
+                        <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="https://twitter.com/"><span class="screen-reader-text">Twitter</span></a></li>
+                        <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a href="http://www.instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+                    </ul>
+                </div><!-- end .social-links -->
+            </div><!-- end .header-social-block -->
+        </div><!--
+        --><div class="col-sm-4 v-center">
+            <img src="@Url.Content("~/images/logo/banner.png")" width="310" height="105" style="margin:0"/>
+        </div><!--
+        --><div class="col-sm-4 v-center">
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a class="icon-topbar-nhan" href="@Url.Action("DangNhap", "NguoiDung")"><i class="fa fa-user" aria-hidden="true"></i> ĐĂNG NHẬP</a>
+                        </div>
+                        <div class="col-sm-6">@Html.Action("_GioHangPartial", "GioHang")</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>

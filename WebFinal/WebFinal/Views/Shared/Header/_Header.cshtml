@@ -1,0 +1,38 @@
+﻿<!-- Masthead ============================================= -->
+<header id="masthead" class="site-header">
+    <div class="custom-header">
+        <div class="custom-header-media">
+        </div>
+    </div>
+
+    
+    <!-- Thanh menu chính============================================= -->
+    <div id="sticky-header" class="clearfix">
+
+        @RenderPage("~/Views/Shared/Header/_TopBarPartial.cshtml")
+        <div class="wrap">
+            <div class="header-navigation-wrap">
+                <nav id="site-navigation" class="main-navigation clearfix">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <span class="line-one"></span>
+                        <span class="line-two"></span>
+                        <span class="line-three"></span>
+                    </button><!-- end .menu-toggle -->
+                    @*Menu chính của page*@
+                    <!--Menu chính của page-->
+                    <ul id="primary-menu" class="menu nav-menu">
+                        <li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-4 current_page_item menu-item-12">@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                        <li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11">@Html.ActionLink("Giới thiệu", "Index", "GioiThieu")</li>
+                        @Html.Action("_LoaiSanPhamMenuChinh", "LoaiSanPham")
+                        <li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">@Html.ActionLink("Bản đồ", "Index", "BanDo")</li>
+                        <li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10">@Html.ActionLink("Liên hệ", "Index", "LienHe")</li>
+                    </ul>
+                </nav> <!-- end #site-navigation -->
+
+
+            </div> <!-- end .header-navigation-wrap -->
+        </div> <!-- end .wrap -->
+    </div><!-- end #sticky-header -->
+
+</header> <!-- end #masthead -->
+<!-- Main Page Start ============================================= -->

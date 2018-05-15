@@ -1,122 +1,105 @@
-﻿@using PagedList.Mvc;
-@model PagedList.PagedList<WebFinal.Models.SanPham>
+﻿@model List<WebFinal.Models.SanPham>
 
 
 
 
-<div class="devvn_tabber" id="featured">
-    <div class="devvn_tabbertab devvn_hangmoi">
-        <h2 class="devvn_title">Hàng mới về</h2>
-        <div class="bannerContent">
-            <div id="devvn-owl-tab-home">
-                <div class="row">
-                    @if (Model != null)
-                    {
-                        foreach (var item in Model)
-                        {
-                            <div class="col-5 devvn_item_prod">
-                                <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP" class="tit-tab-2-gl">
-                                    <img width="300" height="300" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" 
-                                         class="attachment-medium size-medium wp-post-image" alt="@item.TenSP" title="@item.TenSP"  
-                                         sizes="(max-width: 300px) 100vw, 300px">
-                                </a>
-                                <div class="tit-tab-gl"><a href="@Url.Action("Index", "SanPham" , new { @MaSP = item.MaSP })" title="@item.TenSP">@item.TenSP</a></div>
-                                <div>
-                                    <span class="price_w price">@item.GiaBan</span> <span class="price_butt">đ</span>
-                                    <span class=""></span>
-                                    @using (Html.BeginForm("ThemGioHang", "GioHang", new { @MaSP = @item.MaSP, @strUrl = Request.Url.ToString() }))
-                                    {
-                                        <input type="submit" name="addToCart" id="addToCart" value="THÊM VÀO GIỎ HÀNG" class="wp-button" style="cursor: pointer;">
-                                    } 
-                                </div>
-                            </div>
-                        }
-                    }
 
+<div class="row">
+        <div class="col-sm-1">
+            <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example"
+               data-slide="prev"></a>
+        </div>
+        <div class="col-sm-10">
 
+            <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <div class="col-md-15 col-sm-4 product-block">
+                                        <div class="col-item">
+                                            <div class="photo">
+                                                @*Hiển thị hình ảnh sản phẩm*@
+                                                <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP">
+                                                    <img class="img-responsive" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="@item.TenSP" title="@item.TenSP">
+                                                </a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="text-center">
+                                                    <div class="price">
+                                                        <h5>
+                                                            @item.TenSP
+                                                        </h5>
+                                                        <h5 class="price-text-color">
+                                                            @item.GiaBan VNĐ
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <div class="col-md-15 col-sm-4 product-block">
+                                        <div class="col-item">
+                                            <div class="photo">
+                                                @*Hiển thị hình ảnh sản phẩm*@
+                                                <a href="@Url.Action("Index", "SanPham" , new { @MaSP = @item.MaSP })" title="@item.TenSP">
+                                                    <img class="img-responsive" src="@Url.Content("~/images/products/" + @item.AnhBia + ".jpg")" alt="@item.TenSP" title="@item.TenSP">
+                                                </a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="text-center">
+                                                    <div class="price">
+                                                        <h5>
+                                                            @item.TenSP
+                                                        </h5>
+                                                        <h5 class="price-text-color">
+                                                            @item.GiaBan VNĐ
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> <!-- end slider tab -->
+        </div>
+        <div class="col-sm-1">
+            <a class="right fa fa-chevron-right btn btn-success" href="#carousel-example"
+               data-slide="next"></a>
+        </div>
     </div>
-</div>
 
-@*Tạo link liên kết các trang*@
-Trang @(Model.PageCount < Model.PageNumber ? 0: Model.PageNumber)/@Model.Count;
 
-@Html.PagedListPager(Model, page=>Url.Action("Index", "Home", new { page = page }))
 
-<style>
-    .scroller {
-        text-align: center;
-        margin: 0 auto;
-    }
-    .col-5 {
-        width: 20%;
-        float: left;
-        padding: 0 5px;
-    }
 
-    .row .col-5:nth-child(5n+1) {
-        clear: both;
-    }
 
-    .devvn_item_prod {
-        margin-bottom: 20px;
-    }
 
-    .tit-tab-gl {
-        padding: 5px 0;
-    }
 
-    div#devvn-owl-tab-home .row {
-        margin-left: -5px;
-        margin-right: -5px;
-    }
 
-    .devvn_hangmoi, .devvn_hangxemnhieu {
-        margin-bottom: 30px;
-    }
 
-    .copyright-text {
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-    }
-
-    .devvn_item_prod a,
-    .tit-tab-gl a {
-        color: #888;
-    }
-
-    body h2.tit-pro-gl a {
-        font-size: 14px;
-        line-height: 19px;
-        color: #888;
-    }
-
-        .devvn_item_prod a:hover,
-        .tit-tab-gl a:hover,
-        body h2.tit-pro-gl a:hover {
-            color: #000;
-            text-decoration: none;
-            display: block;
-        }
-
-    body h2.tit-pro-gl {
-        margin: 10px 0 3px;
-    }
-    .price {
-        font-size: 12px;
-        color: #FF0000;
-    }
-
-    .devvn_item_prod .wp-post-image {
-        -moz-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-    .devvn_item_prod:hover .wp-post-image {
-        -moz-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-</style>

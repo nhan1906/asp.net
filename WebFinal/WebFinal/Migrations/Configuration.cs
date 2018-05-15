@@ -18,7 +18,6 @@
             context.LoaiSanPhams.AddOrUpdate(x => x.TenLoaiSP, 
                 new LoaiSanPham() { TenLoaiSP = "Nhẫn" },
                 new LoaiSanPham() { TenLoaiSP = "Vòng tay" },
-                new LoaiSanPham() { TenLoaiSP = "Nhẫn" },
                 new LoaiSanPham() { TenLoaiSP = "Dây chuyền" },
                 new LoaiSanPham() { TenLoaiSP = "Lắc tay" },
                 new LoaiSanPham() { TenLoaiSP = "Bộ sản phẩm" });
